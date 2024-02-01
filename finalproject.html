@@ -11,31 +11,29 @@
         <img id="drymoss" src="Textures/Alligator_Ground.jpg">
         <img id="bluesky" src="Textures/Skies0306_350.jpg">
         <img id="drymossnormal" src="Textures/3092-normal.jpg">
+
       </a-assets>
 
       <!-- Setting up scene -->
       
-        <a-plane src="#drymoss" rotation="-90 0 0" scale="180, 180, 180" repeat="10 10" material="roughness: 0.7; normalMap: #drymossnormal;"></a-plane>
+        <a-plane src="#drymoss" rotation="-90 0 0" scale="180, 180, 180" repeat="10 10" material="roughness: 0.7; normalMap: #drymossnormal;" shadow="recieve: true"></a-plane>
         <a-sky src="#bluesky" material="normalMap: #drymossnormal; normalTextureRepeat: 10 10;"></a-sky>
 
         <!-- CAD Models -->
 
-        <a-entity gltf-model="" position="-2 0 3" rotation="0 45 0" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="CAD Models/cheetah.glb" position="-2 0 3" rotation="0 45 0" scale="14 14 14"></a-entity>
+
+            <!-- Trees -->
+            <a-entity gltf-model="CAD Models/oak_trees.glb" position="80 0 3" rotation="0 45 0" scale="24 14 26"></a-entity>
+            <a-entity gltf-model="CAD Models/oak_trees.glb" position="59 0 14" rotation="0 93 0" scale="13 11 12"></a-entity>
+            <a-entity gltf-model="CAD Models/oak_trees.glb" position="-84 0 3" rotation="0 45 0" scale="14 14 14"></a-entity>
 
         <!-- Lighting -->
         
-        <a-entity light="type: ambient; color: #BBB" light="castShadow:true;" intensity="0.2"></a-entity>
-        <a-entity light="type: hemisphere; color: #33C; groundColor; #3C3; intensity: 2"></a-entity>
-        <a-light type="directional"  position="5 6 1" intensity="0.9"></a-light>
-
-
-        <a-assets>
-            <img id="drygrass" src="7_moss texture-seamless.jpg">
-        </a-assets>
-
-    <a-plane material="src: #drygrass" rotation="-90 0 0" scale="300 300 300"></a-plane>
-    <a-sky src="https://th.bing.com/th/id/OIP.PbociGzQg1nU0K-em-61QwHaE8?rs=1&pid=ImgDetMain"></a-sky>
-
+        <a-entity light="color:#FCF6EA; type:directional; intensity: 0.9; castShadow: true; type: point; shadowBias: -0.001; decay: -0.3" position="60 30 100" data-aframe-default-light="" aframe-injected="" rotation="-60 0 0"></a-entity>
+        <!-- sun -->
+        <a-entity light="color:#FCF9D9; type:directional; intensity: 4" position="-0.5 -4.30949 5.35426"></a-entity>
+        
         </a-assets>
     </a-scene>
 </body>
