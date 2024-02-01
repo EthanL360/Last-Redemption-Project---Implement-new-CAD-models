@@ -5,16 +5,38 @@
   <body>
     <a-scene>
       <a-assets>
-        <img id="drymoss" src="Alligator_Ground.jpg">
-        <img id="bluesky" src="Skies0306_350.jpg">
-        <img id="drymossnormal" src="3092-normal.jpg">
+
+        <!-- Textures -->
+
+        <img id="drymoss" src="Textures/Alligator_Ground.jpg">
+        <img id="bluesky" src="Textures/Skies0306_350.jpg">
+        <img id="drymossnormal" src="Textures/3092-normal.jpg">
       </a-assets>
-      <!-- Add normal map -->
+
+      <!-- Setting up scene -->
+      
         <a-plane src="#drymoss" rotation="-90 0 0" scale="180, 180, 180" repeat="10 10" material="roughness: 0.7; normalMap: #drymossnormal;"></a-plane>
         <a-sky src="#bluesky" material="normalMap: #drymossnormal; normalTextureRepeat: 10 10;"></a-sky>
+
+        <!-- CAD Models -->
+
+        <a-entity gltf-model="" position="-2 0 3" rotation="0 45 0" scale="2 2 2"></a-entity>
+
+        <!-- Lighting -->
+        
         <a-entity light="type: ambient; color: #BBB" light="castShadow:true;" intensity="0.2"></a-entity>
         <a-entity light="type: hemisphere; color: #33C; groundColor; #3C3; intensity: 2"></a-entity>
         <a-light type="directional"  position="5 6 1" intensity="0.9"></a-light>
+
+
+        <a-assets>
+            <img id="drygrass" src="7_moss texture-seamless.jpg">
+        </a-assets>
+
+    <a-plane material="src: #drygrass" rotation="-90 0 0" scale="300 300 300"></a-plane>
+    <a-sky src="https://th.bing.com/th/id/OIP.PbociGzQg1nU0K-em-61QwHaE8?rs=1&pid=ImgDetMain"></a-sky>
+
+        </a-assets>
     </a-scene>
-  </body>
+</body>
 </html>
