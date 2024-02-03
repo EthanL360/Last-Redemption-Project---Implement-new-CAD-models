@@ -5,15 +5,17 @@
   <body>
     <a-scene>
       <a-assets>
-
-        <a-asset-item id="terrain" src="CAD Models/terrainblender.glb"></a-asset-item>
-        <img id="bluesky" src="Skies0306_350.jpg">
-
+        <a-asset-item id="terrain" src="CAD Models/untitled.glb"></a-asset-item>
+        <img id="bluesky" src="Textures/Skies0306_350.jpg">
+        <img id="grass" src="Textures/7_moss texture-seamless.jpg">
+        <img id="dirt" src=""
       </a-assets>
 
-      <a-entity shadow="cast: true; receive: false" gltf-model="#terrain"  position="0 0 0" scale="1 1 1" rotation="0 0 0"></a-entity>
+      <a-entity gltf-model="#terrain" position="0 0 0" scale="5 5 5" rotation="0 180 0" shadow="cast: true; receive: false"></a-entity>
+      <a-plane position="0 0.4 0" rotation="-90 0 0" scale="50 50 50"></a-plane>
+      
 
-      <a-entity shadow="cast: true" gltf-model="#terrain" material="side: double" position="0 0 0" scale="0 0 0" rotation="0 0 0"></a-entity>
+      <a-sky src="#bluesky"></a-sky>
     </a-scene>
   </body>
 </html>
