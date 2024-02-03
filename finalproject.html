@@ -16,43 +16,45 @@
 
       <!-- Setting up scene -->
       
-        <a-plane src="#drymoss" rotation="-90 0 0" scale="180, 180, 180" repeat="10 10" material="roughness: 0.7; normalMap: #drymossnormal;" shadow="recieve: true"></a-plane>
+        <a-plane src="#drymoss" rotation="-90 0 0" scale="180, 180, 180" repeat="10 10" material="roughness: 0.7; normalMap: #drymossnormal;" shadow="cast: true; receive: false"></a-plane>
         <a-sky src="#bluesky" material="normalMap: #drymossnormal; normalTextureRepeat: 10 10;"></a-sky>
 
         <!-- CAD Models -->
 
-        <a-entity gltf-model="CAD Models/cheetah.glb" shadow="cast: true; receive: false" position="-2 0 3" rotation="0 45 0" scale="14 14 14"></a-entity>
+            <!-- Cheetahs -->
+
+        <a-entity gltf-model="CAD Models/cheetah.glb" shadow="cast: true; receive: true" position="-2 0 3" rotation="0 45 0" scale="14 14 14"></a-entity>
 
             <!-- Trees -->
-
+            <a-entity gltf-model="CAD Models/oak_trees.glb" shadow="cast: true; receive: true" position="-21 0 -19" rotation="0 0 0" scale="7 7 7"></a-entity>
 
             
             <!-- Rocks -->
 
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="5 0 37" rotation="0 140 0" scale="15 15 15"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="-5 0 37" rotation="0 75 0" scale="10 20 10"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="-5 0 -37" rotation="0 0 0" scale="10 10 10"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="5 0 -37" rotation="0 -140 0" scale="10 10 10"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="-15 0 20" rotation="0 169 0" scale="10 10 10"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="15 0 -20" rotation="0 -70 0" scale="10 10 10"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="17 0 -10" rotation="0 80 0" scale="14 14 14"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="15 0 10" rotation="0 180 0" scale="10 10 10"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="18 0 22" rotation="0 180 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="5 0 37" rotation="0 140 0" scale="15 15 15"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="-5 0 37" rotation="0 75 0" scale="10 20 10"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="-5 0 -37" rotation="0 0 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="5 0 -37" rotation="0 -140 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="-15 0 20" rotation="0 169 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="15 0 -20" rotation="0 -70 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="17 0 -10" rotation="0 80 0" scale="14 14 14"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="15 0 10" rotation="0 180 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="18 0 22" rotation="0 180 0" scale="10 10 10"></a-entity>
 
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="-20 0 16" rotation="0 180 0" scale="10 10 10"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="-37 0 16" rotation="0 180 0" scale="10 10 10"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="-37 0 30" rotation="0 180 0" scale="10 10 10"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="-48 0 -35" rotation="0 180 0" scale="16 16 16"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="-42 0 -15" rotation="0 180 0" scale="10 10 10"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="-42 0 -3" rotation="0 180 0" scale="10 10 10"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="-30 0 14" rotation="0 120 0" scale="10 10 10"></a-entity>
-            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: false" position="-14 0 -33" rotation="0 120 0" scale="14 14 14"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="-20 0 16" rotation="0 180 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="-37 0 16" rotation="0 180 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="-37 0 30" rotation="0 180 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="-48 0 -35" rotation="0 180 0" scale="16 16 16"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="-42 0 -15" rotation="0 180 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="-42 0 -3" rotation="0 180 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="-30 0 14" rotation="0 120 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="CAD Models/rock.glb" shadow="cast: true; receive: true" position="-18 0 -33" rotation="0 -240 0" scale="16 14 16"></a-entity>
 
         <!-- Lighting -->
         
-        <a-entity light="color:#FCF6EA; type:directional; intensity: 0.9; castShadow: true; type: point; shadowBias: -0.001; decay: -0.3" position="60 30 100" data-aframe-default-light="" aframe-injected="" rotation="-60 0 0"></a-entity>
+        <a-entity light="color:#FCF6EA; type:directional; intensity: 2; castShadow: true; type: point; shadowBias: -0.001; decay: -0.3" position="10 25 10" data-aframe-default-light="" aframe-injected="" rotation="-60 0 0"></a-entity>
         <!-- sun -->
-        <a-entity light="color:#FCF9D9; type:directional; intensity: 2" position="1 10 7"></a-entity>
+        <a-entity light="color:#FCF9D9; type:directional; intensity: 0.9" position="1 10 7"></a-entity>
         
         </a-assets>
     </a-scene>
