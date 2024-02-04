@@ -5,15 +5,34 @@
   <body>
     <a-scene>
       <a-assets>
+
+      <!-- CAD Models -->
+        
         <a-asset-item id="terrain" src="CAD Models/untitled.glb"></a-asset-item>
+      </a-asset-item id="treeA" src="CAD MODELS/tree_animate.glb"></a-asset-item>
+
+
+      <!-- Textures -->
+
         <img id="bluesky" src="Textures/Skies0306_350.jpg">
         <img id="grass" src="Textures/7_moss texture-seamless.jpg">
-        <img id="dirt" src=""
+        <img id="dirt" src="Textures/DIRT.jpg">
       </a-assets>
 
-      <a-entity gltf-model="#terrain" position="0 0 0" scale="5 5 5" rotation="0 180 0" shadow="cast: true; receive: false"></a-entity>
-      <a-plane position="0 0.4 0" rotation="-90 0 0" scale="50 50 50"></a-plane>
+      <!-- Terrain -->
+
+      <a-entity gltf-model="#terrain" position="0 0 0" scale="5 5 5" rotation="0 180 0" shadow="cast: true; receive: true"></a-entity>
+      <a-plane src="#dirt" position="0 0.4 0" rotation="-90 0 0" scale="50 50 50" shadow="cast: true; receive: true"></a-plane>
       
+      <!-- Lighting  -->
+      
+      <a-entity light="color:#FCF6EA; type:directional; intensity: 0.9; castShadow: true; type: point; shadowBias: -0.001; decay: -0.3" position="60 30 100" rotation="-60 0 0"></a-entity>
+      <a-entity light="color:#C7AB74; type:directional; intensity: 1.2" position="-75 50 10"></a-entity>
+
+      <!-- Trees -->
+      
+      <a-entity gltf-model="#treeA"></a-entity>
+
 
       <a-sky src="#bluesky"></a-sky>
     </a-scene>
